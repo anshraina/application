@@ -1,11 +1,12 @@
 package com.ansh.application.models;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
-
-public class Series {
+@Entity
+public class Series{
     @Id
     @Column(nullable = false, updatable = false)
     private Long id;
@@ -29,7 +30,7 @@ public class Series {
         return season;
     }
     public Series() {
-        
+
     }
     public Series(Long id, String name, int season, int episodes, int rating) {
         this.id = id;
